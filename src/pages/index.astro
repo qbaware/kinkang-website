@@ -31,33 +31,31 @@ const metadata = {
 
   <Hero3
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features', class: 'bg-c' },
+      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind', class: 'bg-black text-white hover:bg-gray-800 focus:ring-gray-800 transition-colors' },
+      { text: 'Learn more', href: '#features' },
     ]}
     image={{
-      src: '~/assets/images/kafka-dashboard.png',
+      src: '~/assets/images/kirka.svg',
       alt: 'AstroWind Hero Image',
     }}
     bg={`
-      <div class="absolute inset-0 -z-10 overflow-hidden rounded-bl-[100px] rounded-br-[100px] bg-gradient-to-b from-blue-950 via-blue-900 to-blue-800"></div>
+      <div class="absolute inset-0 -z-10 overflow-hidden rounded-bl-[100px] rounded-br-[100px] bg-blue-50"></div>
     `}
   >
     <Fragment slot="title">
-      <span class="text-white">
         Your
-        <span class="text-accent font-semibold">Kafka</span>
+        <span class="font-semibold">Kafka</span>
         cluster
         <br />
-        <span class="text-accent font-semibold">Balanced</span>
+        <span class="font-semibold">Balanced</span>
         and properly
-        <span class="text-accent font-semibold">Scaled</span>.
+        <span class="font-semibold">Scaled</span>.
         <br />
-      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline text-white">We provide managed <a href="https://github.com/linkedin/cruise-control"><span class="font-semibold">Cruise Control</a></span>
-      <span class="text-white">instances that automatically balance, self-heal, and scale your Kafka cluster both up and down.</span>
+      We provide managed <a href="https://github.com/linkedin/cruise-control">Cruise Control</a>
+      instances that automatically balance, self-heal, and scale your Kafka cluster both up and down.
     </Fragment>
   </Hero3>
 
