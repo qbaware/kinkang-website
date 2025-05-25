@@ -24,105 +24,223 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Fragment slot="header">
-    <Header {...headerData} isSticky />
+    <Header {...headerData} isSticky={true} />
   </Fragment>
 
   <!-- Hero3 Widget ******************* -->
 
   <Hero3
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind', class: 'bg-black text-white hover:bg-gray-800 focus:ring-gray-800 transition-colors' },
-      { text: 'Learn more', href: '#features' },
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '#',
+      },
+      { text: 'Learn More', href: '#' },
     ]}
     image={{
-      src: '~/assets/images/kirka.svg',
+      src: '~/assets/images/hero-mandarina3.svg',
       alt: 'AstroWind Hero Image',
     }}
     bg={`
-      <div class="absolute inset-0 -z-10 overflow-hidden rounded-bl-[100px] rounded-br-[100px] bg-blue-50"></div>
+      <div class="absolute inset-0 -z-10 overflow-hidden rounded-bl-[50px] rounded-br-[50px] bg-[#fafafa]"></div>
     `}
   >
     <Fragment slot="title">
-        Your
-        <span class="font-semibold">Kafka</span>
-        cluster
-        <br />
-        <span class="font-semibold">Balanced</span>
-        and properly
-        <span class="font-semibold">Scaled</span>.
-        <br />
+      Your
+      <span class="font-bold">Kafka</span>
+      cluster properly
+      <span class="font-bold">Managed</span>.
     </Fragment>
 
     <Fragment slot="subtitle">
+      <br />
+      Operating Apache Kafka clusters at scale is complex and requires a number of experienced engineers. Well, not anymore!
+      <br />
+      <br />
       We provide managed <a href="https://github.com/linkedin/cruise-control">Cruise Control</a>
-      instances that automatically balance, self-heal, and scale your Kafka cluster both up and down.
+      instances that automatically balance, self-heal, and scale Kafka clusters.
     </Fragment>
   </Hero3>
 
-  <!-- Brands Widget ****************** -->
+  <!-- Features3 Widget ************** -->
 
-  <Brands
-    title="Companies trusting Cruise Control"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
-    tagline="Usage"
-    icons={[]}
-    images={[
+  <Features3
+    title="Why use Kinkang?"
+    tagline="Overview"
+    subtitle="Let's list some reasons."
+    columns={2}
+    items={[
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'LinkedIn',
+        title: 'Focus On What Matters',
+        description:
+          'Let us handle the complexities of your Kafka cluster while you focus on your core business. Business velocity is key, and we ensure your Kafka cluster runs smoothly so you can concentrate on delivering value to your customers.',
+        icon: 'tabler:focus-2',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
-        alt: 'Visa',
+        title: 'Save Time & Money',
+        description:
+          "By trusting our team, you save your team's time and your business' money. Instead of having 5, 10, or even more engineers managing your Kafka cluster, you can have only a handful that work with us.",
+        icon: 'tabler:pig-money',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
-        alt: 'Ebay',
-      },
-
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
-        alt: 'Youtube',
+        title: 'Operating Kafka Is Hard',
+        description:
+          "There's no need to convince you how hard it is to operate Kafka, especially at scale. Why spend effort in doing it yourself? Trust our product and our expertise.",
+        icon: 'tabler:fire-extinguisher',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
+        title: 'Industry-Standard Tech',
+        description: `Kinkang is built on <a href="https://github.com/linkedin/cruise-control">Cruise Control</a>, the default go-to tool in the industry for Kafka management. It's an open-source tool designed to greatly simplify the management of Kafka clusters.`,
+        icon: 'tabler:chess-king',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
+        title: 'We Have The Experience & Know-How',
+        description:
+          'As ex-employees at one of the most popular Kafka providers on the market, our team has a combined experience of more than a decade in managing and optimizing Kafka clusters at an enornous scale.',
+        icon: 'tabler:rocket',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
-        alt: 'Yahoo',
+        title: 'Support',
+        description:
+          "We'll always be there to help if something goes sideways. We'll be there to help you scale. We'll be there to consult you when necessary.",
+        icon: 'tabler:headset',
       },
     ]}
+    classes={{ container: 'max-w-5xl' }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="But what is Cruise Control?"
-    subtitle="Cruise Control is an open-source tool designed to simplify the management of Apache Kafka clusters. It provides a comprehensive solution for scaling, balancing, and self-healing Kafka clusters, ensuring optimal performance and reliability."
-    tagline="Features"
+    title="Core capabilities"
+    subtitle="What Kinkang can do for you"
+    tagline="Capabilities"
+    items={[
+      {
+        title: 'Cluster Expansion',
+        description: 'Add new brokers to your Kafka cluster to increase its capabilities.',
+        icon: 'flat-color-icons:bullish',
+      },
+      {
+        title: 'Cluster Shrink',
+        description:
+          'Remove brokers to scale down your Kafka cluster to optimize costs when the additional capacity is not needed.',
+        icon: 'flat-color-icons:bearish',
+      },
+      {
+        title: 'Automatic Rebalancing',
+        description:
+          'Based on changes in the running workload, topic partitions will be automatically reassigned to ensure optimal resource utilization.',
+        icon: 'flat-color-icons:dam',
+      },
+      {
+        title: 'Self-Healing',
+        description:
+          'This includes features like broker failure detection which automatically decomissions broken brokers, broken disk detection, and others.',
+        icon: 'flat-color-icons:plus',
+      },
+      {
+        title: 'Enforcing Resiliency',
+        description:
+          'Kinkang enforces resiliency by ensuring that topic partitions are evenly distributed across brokers in different AZs, preventing data loss and ensuring high availability.',
+        icon: 'flat-color-icons:data-protection',
+      },
+      {
+        title: 'Manual Rebalancing',
+        description:
+          'When the cluster is not automatically rebalancing due to not being imbalanced enough, you can still trigger a rebalance.',
+        icon: 'flat-color-icons:reading-ebook',
+      },
+      {
+        title: 'API',
+        description:
+          "For more advanced use cases, there's an available REST API that you can leverage to build any form of tooling around Kinkang.",
+        icon: 'flat-color-icons:crystal-oscillator',
+      },
+      {
+        title: 'Notifications',
+        description:
+          "If you're interested in receiving Slack notifications when an anomaly is detected, we can set that up for you.",
+        icon: 'flat-color-icons:about',
+      },
+      {
+        title: 'Others',
+        description: 'There are many more features that Kinkang provides.',
+        icon: 'flat-color-icons:menu',
+      },
+    ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Companies trusting Cruise Control"
+    subtitle="We weren't joking when we said that Cruise Control is the industry standard for Kafka management."
+    tagline="Adoption"
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/logos/linkedin.png',
+        alt: 'LinkedIn',
+      },
+      {
+        src: '~/assets/images/logos/uber2.svg',
+        alt: 'Uber',
+      },
+      {
+        src: '~/assets/images/logos/netflix.png',
+        alt: 'Netflix',
+      },
+      {
+        src: '~/assets/images/logos/apple.png',
+        alt: 'Apple',
+      },
+      {
+        src: '~/assets/images/logos/slack3.svg',
+        alt: 'Slack',
+      },
+      {
+        src: '~/assets/images/logos/alibaba.png',
+        alt: 'Alibaba',
+      },
+      {
+        src: '~/assets/images/logos/adobe.svg',
+        alt: 'Adobe',
+      },
+      {
+        src: '~/assets/images/logos/shopify.svg',
+        alt: 'Shopify',
+      },
+      {
+        src: '~/assets/images/logos/intuit.svg',
+        alt: 'Intuit',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    title="Discover the impressive impact of Astrowind"
+    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
+    stats={[
+      { title: 'Downloads', amount: '182K' },
+      { title: 'Websites Launched', amount: '87' },
+      { title: 'User Ratings', amount: '4.8' },
+      { title: 'Satisfied Clients', amount: '116K' },
+    ]}
+  /> -->
+
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     title="Use cases"
+    tagline="Usage"
     subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
     isReversed
     items={[
@@ -148,13 +266,13 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0  dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isAfterContent={true}
     items={[
       {
@@ -178,13 +296,13 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0  dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -209,13 +327,13 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0  dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     items={[
       {
         title: 'Description:',
@@ -238,96 +356,32 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0  dark:bg-transparent"></div>
     </Fragment>
-  </Content>
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  </Content> -->
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="How to use Kinkang"
+    tagline="Setup"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+        title: 'Step 1: <span class="font-medium">Configure metrics</span>',
+        description: "Kinkang needs to consume metrics from your Kafka cluster's metrics topic or Prometheus endpoint.",
+        icon: 'tabler:settings',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Secure access</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Kinkang needs to connect to your Kafka cluster to periodically fetch both metrics and cluster metadata. Ensuring secure networking is essential.',
+        icon: 'tabler:shield',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">We create your Kinkang</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Based on your requirements and details, we deploy a Kinkang instance that is tailored to your needs.',
+        icon: 'tabler:arrow-up-to-arc',
       },
       {
         title: 'Ready!',
@@ -335,78 +389,42 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/mandarina6.svg',
       alt: 'Steps image',
     }}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
-
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Reach out to us"
+    title="Reach out"
     subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
     callToAction={{
       text: 'Contact us',
-      href: '/',
+      href: '/contact',
     }}
     items={[
       {
         title: 'Email us',
-        description: 'contact@support.com',
+        description: 'support@kinkang.com',
         icon: 'tabler:mail',
       },
       {
         title: 'Call us',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        description: '+359 (0) 899 859 592',
+        icon: 'tabler:phone-call',
       },
       {
         title: 'Follow us',
-        description: '@example',
+        description: '@qbawaresoft',
         icon: 'tabler:brand-twitter',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 5.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
-    stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
-    ]}
-  />
-
   <!-- Features Widget *************** -->
 
-  <Features
+  <!-- <Features
     id="features"
     title="Main features of our templates"
     subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
@@ -446,53 +464,11 @@ const metadata = {
         icon: 'tabler:plug-connected',
       },
     ]}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'Why Cruise Control?',
-        description:
-          'Cruise Control is an industry-standard tool for scaling up, scaling down, and balancing Kafka clusters. It provides a comprehensive solution for managing Kafka clusters efficiently.',
-      },
-      {
-        title: 'Why should I use a template?',
-        description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
-      },
-      {
-        title: 'Can I preview templates before buying?',
-        description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
-      },
-      {
-        title: 'Do I need technical skills to use a template?',
-        description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
-      },
-      {
-        title: 'Can I use the template on multiple websites?',
-        description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
-      },
-      {
-        title: 'What if I need help with customization?',
-        description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
+  /> -->
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
+  <!-- <Features3
     title="Let us know how we can help"
     subtitle="We’re here to help and answer any question you might have."
     columns={4}
@@ -538,11 +514,11 @@ const metadata = {
         },
       },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     actions={[
       {
         variant: 'primary',
@@ -559,5 +535,5 @@ const metadata = {
       Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
       impact.
     </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 </Layout>
