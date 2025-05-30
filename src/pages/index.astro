@@ -34,13 +34,13 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get Started',
-        href: '#',
+        href: '/pricing',
       },
-      { text: 'Learn More', href: '#' },
+      { text: 'Learn More', href: '#how-to-use-kinkang' },
     ]}
     image={{
-      src: '~/assets/images/hero-mandarina3.svg',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/hero-mandarina5.svg',
+      alt: 'Kinkang high-level architecture',
     }}
     bg={`
       <div class="absolute inset-0 -z-10 overflow-hidden rounded-bl-[50px] rounded-br-[50px] bg-[#fafafa]"></div>
@@ -363,6 +363,7 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
+    id='how-to-use-kinkang'
     title="How to use Kinkang"
     tagline="Setup"
     items={[
@@ -384,7 +385,8 @@ const metadata = {
         icon: 'tabler:arrow-up-to-arc',
       },
       {
-        title: 'Ready!',
+        title: 'Done!',
+        description: 'Your cluster is now has properly taken care of.',
         icon: 'tabler:check',
       },
     ]}
@@ -518,22 +520,19 @@ const metadata = {
 
   <!-- CallToAction Widget *********** -->
 
-  <!-- <CallToAction
+  <CallToAction
     actions={[
       {
         variant: 'primary',
-        target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Pricing',
+        href: '/pricing',
       },
     ]}
   >
-    <Fragment slot="title">Be a part of our vision</Fragment>
+    <Fragment slot="title">Interested? Check out our pricing</Fragment>
 
     <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
+      We offer a variety of pricing options that cater to different needs and budgets.
     </Fragment>
-  </CallToAction> -->
+  </CallToAction>
 </Layout>

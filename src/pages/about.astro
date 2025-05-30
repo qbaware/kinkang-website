@@ -16,12 +16,35 @@ const metadata = {
 
   <Features2
     title="About us"
+    tagline="The Team"
     subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 5.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[#fafafa] dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={2}
+    items={[
+      {
+        title: 'United Kingdom',
+        description: 'E20, Glasshouse Gardens, London',
+      },
+      {
+        title: 'Spain',
+        description: 'Valencia',
+      },
+      {
+        title: 'Bulgaria',
+        description: '1618, Aret Residence, Sofia',
+      },
+    ]}
+  />
 
   <!-- Hero Widget ******************* -->
 
@@ -185,54 +208,6 @@ const metadata = {
         description:
           'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
         icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
       },
     ]}
   />
