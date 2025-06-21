@@ -34,9 +34,9 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get Started',
-        href: '/pricing',
+        href: '/#contact-us',
       },
-      { text: 'Learn More', href: '#how-to-use-kinkang' },
+      { text: 'Learn More', href: '#why-use-kinkang' },
     ]}
     image={{
       src: '~/assets/images/hero-mandarina5.svg',
@@ -49,7 +49,7 @@ const metadata = {
     <Fragment slot="title">
       Your
       <span class="font-bold">Kafka</span>
-      cluster properly
+      cluster. Properly
       <span class="font-bold">Managed</span>.
     </Fragment>
 
@@ -66,6 +66,7 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
+    id="why-use-kinkang"
     title="Why use Kinkang?"
     tagline="Overview"
     subtitle="Let's list some reasons."
@@ -363,7 +364,7 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    id='how-to-use-kinkang'
+    id="how-to-use-kinkang"
     title="How to use Kinkang"
     tagline="Setup"
     items={[
@@ -400,10 +401,10 @@ const metadata = {
 
   <Steps2
     title="Have questions?"
-    subtitle="Feel free to contact us using the form below. We're here to help!"
+    subtitle="Check the FAQs and feel free to contact us. We're here to help!"
     callToAction={{
-      text: 'Contact us',
-      href: '/contact',
+      text: 'FAQs',
+      href: '/faqs',
     }}
     items={[
       {
@@ -412,14 +413,14 @@ const metadata = {
         icon: 'tabler:mail',
       },
       {
+        title: 'Join us',
+        description: 'discord.gg/4sRmgb9Vph',
+        icon: 'tabler:brand-discord',
+      },
+      {
         title: 'Call us',
         description: '+359 (0) 899 859 592',
         icon: 'tabler:phone-call',
-      },
-      {
-        title: 'Follow us',
-        description: '@qbawaresoft',
-        icon: 'tabler:brand-twitter',
       },
     ]}
   />
@@ -521,18 +522,17 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
+    id="contact-us"
     actions={[
       {
         variant: 'primary',
-        text: 'Pricing',
-        href: '/pricing',
+        text: 'Contact us',
+        href: '/contact',
       },
     ]}
   >
-    <Fragment slot="title">Interested? Check out our pricing</Fragment>
+    <Fragment slot="title">Interested? Reach out for a quote</Fragment>
 
-    <Fragment slot="subtitle">
-      We offer a variety of pricing options that cater to different needs and budgets.
-    </Fragment>
+    <Fragment slot="subtitle"> We'll tailor an offer to your specific needs. </Fragment>
   </CallToAction>
 </Layout>
