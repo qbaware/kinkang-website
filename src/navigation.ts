@@ -12,11 +12,11 @@ export const headerData = {
       links: [
         {
           text: 'Cruise Control',
-          href: getPermalink('/contact'),
+          href: getPermalink('/cruise_control'),
         },
         {
           text: 'Kinkang Autoscale',
-          href: getPermalink('/contact'),
+          href: getPermalink('/autoscaling'),
         },
       ],
     },

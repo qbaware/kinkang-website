@@ -12,171 +12,53 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    image={{
+      src: '~/assets/images/kinkang-team.jpeg',
+      alt: 'Team',
+    }}
+  >
+    <Fragment slot="title"> And here we are </Fragment>
+
+    <Fragment slot="subtitle">
+      Three friends with a shared passion for Kafka and distributed systems in general.
+    </Fragment>
+  </Hero>
+
   <!-- Features2 Widget ************** -->
 
   <Features2
     title="About us"
     tagline="The Team"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 5.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    subtitle="We're a team of three engineers that met each other at Confluent who afterward became close friends and decided to build a world-class product together in the Apache Kafka space. A product that we have the expertise of building and maintaining. A product that we would be proud of. A product that would help business world wide scale efortlessly."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={2}
-    items={[
-      {
-        title: 'United Kingdom',
-        description: 'London',
-      },
-      {
-        title: 'Spain',
-        description: 'Valencia',
-      },
-      {
-        title: 'Bulgaria',
-        description: 'Sofia',
-      },
-    ]}
-  />
-
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
     title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    subtitle="Our team is built on a foundation of core values that guide our actions and decisions. These values are not just words, but principles that we live by every day."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Customer Love',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          "Earning and keeping our customers' trust is our top priority. Just like any business, we want to deliver value with great quality so that both we and our customers thrive businesses.",
       },
       {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+        title: 'Get Sh*t Done',
+        description: 'Sometimes we just have to roll up our sleeves and get our hands dirty with some unplanned and unexpected but yet high-return tasks. Our team is good at that.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'One Team',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          "Maybe it's obvious, but it's super important. We are one team! We work together, we support each other, we enjoy each other's comapny, and we celebrate our successes together.",
       },
     ]}
   />
@@ -185,12 +67,8 @@ const metadata = {
 
   <Steps2
     title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    subtitle="Not to brag, but we are proud of what we have achieved so far. We have a long way to go, but we are confident that we will get there."
     isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
     items={[
       {
         title: 'Global reach',
@@ -208,6 +86,28 @@ const metadata = {
         description:
           'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
         icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Where we operate"
+    tagline="Locations"
+    columns={2}
+    items={[
+      {
+        title: 'United Kingdom',
+        description: 'London',
+      },
+      {
+        title: 'Spain',
+        description: 'Madrid',
+      },
+      {
+        title: 'Bulgaria',
+        description: 'Sofia',
       },
     ]}
   />

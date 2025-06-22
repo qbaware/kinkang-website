@@ -6,6 +6,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/LandingPage.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'FAQs',
@@ -16,6 +17,7 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    tagline="FAQs"
     title="Frequently Asked Questions"
     items={[
       {
@@ -54,4 +56,19 @@ const metadata = {
       <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </FAQs>
+
+  <CallToAction
+    id="contact-us"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact us',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">Still have questions?</Fragment>
+
+    <Fragment slot="subtitle">Reach out directly to us.</Fragment>
+  </CallToAction>
 </Layout>
