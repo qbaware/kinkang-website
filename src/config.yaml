@@ -1,6 +1,6 @@
 site:
   name: Kinkang
-  site: 'https://kinkang.app'
+  site: 'https://qbaware.github.io/kinkang-website/'
   base: '/'
   trailingSlash: false
 
