@@ -1,6 +1,6 @@
 site:
   name: Kinkang
-  site: 'https://kinkang.app'
+  site: 'https://kinkang.app/'
   base: '/'
   trailingSlash: false
 
