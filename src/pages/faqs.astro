@@ -21,34 +21,29 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
+        title: 'What kind of Apache Kafka deployments are supported?',
+        description:
+          "So far, we support self-managed deployments (either on-premises or in the cloud), AWS MSK, and GCP Kafka. Kinkang can be used for any Apache Kafka cluster, regardless of its underlying infrastructure. Although, there are some exceptions like managed Kafka clusters from providers such as Confluent, Aiven, and others that don't have the necessary configuration exposure to setup connectivity to Kinkang.",
+      },
+      {
         title: 'Why Cruise Control?',
         description:
-          'Cruise Control is an industry-standard tool for scaling up, scaling down, and balancing Kafka clusters. It provides a comprehensive solution for managing Kafka clusters efficiently.',
+          'Cruise Control is an industry-standard tool for scaling and balancing Kafka clusters. It provides a comprehensive solution for managing Kafka clusters efficiently at an enormous scale.',
       },
       {
-        title: 'Why should I use a template?',
+        title: 'How do we guarantee secure connectivity?',
         description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
+          "For self-managed Kafka deployments, we support and recommend using security protocols such as SSL (for encryption) and SASL/PLAIN (for authentication) for secure communication over the public internet and we're flexible enough to adapt to any other security requirements. As for AWS MSK and GCP Kafka, we use can again choose between SSL + SASL/PLAIN over the public internet, or use AWS and GCP networking and security services like IAM authentication, AWS Private Link (or PNI) / GCP Private Service Connect, VPC peering, and others to securely connect to an AWS MSK or GCP Kafka instance.",
       },
       {
-        title: 'Can I preview templates before buying?',
+        title: 'What happens if Kinkang has an outage?',
         description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
+          "Kinkang is designed to be resilient and fault-tolerant. But disasters do happen. In case of such, the main impact for our customers would be temporarily no workload rebalancing and no cluster scaling operations. But the Kafka cluster itself will continue to operate normally and as usual. We're NOT impacting the cluster's health and its critical operations in any way.",
       },
       {
-        title: 'Do I need technical skills to use a template?',
+        title: 'How do I have interact with my Kinkang instance?',
         description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
-      },
-      {
-        title: 'Can I use the template on multiple websites?',
-        description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
-      },
-      {
-        title: 'What if I need help with customization?',
-        description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
+          'We offer an API that allows you to interact with your Kinkang instance. The API offers a manual rebalance mechanism, onboarding and offboarding of Kafka brokers (i.e. cluster shrink and cluster expansion), stoppage of an ongoing rebalance, cluster state querying, and more. This API can be used to create internal custom tools.',
       },
     ]}
   >
