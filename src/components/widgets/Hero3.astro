@@ -62,7 +62,7 @@ const {
                     // pull out any custom class they passed
                     const extra = action.class ?? '';
                     // remove it from the spread so we don’t double‐apply
-                    const { class: _throwaway, ...btnProps } = action;
+                    const { ...btnProps } = action;
 
                     return (
                       <div class="flex w-full sm:w-auto">
