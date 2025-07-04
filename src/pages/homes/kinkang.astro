@@ -25,11 +25,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Fragment slot="header">
-    <Header
-      {...headerData}
-      showToggleTheme
-      isSticky
-    />
+    <Header {...headerData} showToggleTheme isSticky />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -46,9 +42,8 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white"
-        >SaaS</span
-      > companion<br />
+      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white">SaaS</span> companion<br
+      />
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -335,7 +330,6 @@ const metadata = {
     </Fragment>
   </BlogLatestPosts>
 
-
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
@@ -591,5 +585,4 @@ const metadata = {
       impact.
     </Fragment>
   </CallToAction>
-  
 </Layout>
