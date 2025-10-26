@@ -10,12 +10,12 @@ export const headerData = {
       text: 'Solutions',
       links: [
         {
-          text: 'Cruise Control',
-          href: getPermalink('/cruise_control'),
+          text: 'Kinkang Cruise Control',
+          href: getPermalink('/kinkang-cruise-control'),
         },
         {
           text: 'Kinkang Autoscale',
-          href: getPermalink('/autoscaling'),
+          href: getPermalink('/kinkang-autoscaling'),
         },
       ],
     },
@@ -36,12 +36,12 @@ export const headerData = {
       text: 'Resources',
       links: [
         {
-          text: 'Blog',
-          href: getBlogPermalink(),
-        },
-        {
           text: 'FAQs',
           href: getPermalink('/faqs'),
+        },
+        {
+          text: 'Blog',
+          href: getBlogPermalink(),
         },
       ],
     },
@@ -93,7 +93,6 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/qbaware' },
-    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: 'https://discord.gg/4sRmgb9Vph' },
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/qbawaresoft' },
   ],
   footNote: `

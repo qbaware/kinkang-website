@@ -18,10 +18,10 @@ const metadata = {
       {
         title: 'What kind of Apache Kafka deployments are supported?',
         description:
-          "So far, we support self-managed deployments (either on-premises or in the cloud), AWS MSK, and GCP Kafka. Kinkang can be used for any Apache Kafka cluster, regardless of its underlying infrastructure. Although, there are some exceptions like managed Kafka clusters from providers such as Confluent, Aiven, and others that don't have the necessary configuration exposure to setup connectivity to Kinkang.",
+          "So far, we support self-managed deployments (either on-premises, or in the cloud) and AWS MSK. We do not support other managed Kafka providers such as Confluent, Aiven, Instaclustr, and others becuase they don't have the necessary configuration exposure to setup connectivity to Kinkang.",
       },
       {
-        title: 'Why Cruise Control?',
+        title: 'Why base Kinkang on Cruise Control?',
         description:
           'Cruise Control is an industry-standard tool for scaling and balancing Kafka clusters. It provides a comprehensive solution for managing Kafka clusters efficiently at an enormous scale.',
       },
@@ -58,7 +58,5 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">Still have questions?</Fragment>
-
-    <Fragment slot="subtitle">Reach out</Fragment>
   </CallToAction>
 </Layout>

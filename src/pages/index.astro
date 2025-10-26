@@ -29,7 +29,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Get Started',
-        href: '/#contact-us',
+        href: '/contact',
       },
       { text: 'Learn More', href: '#why-use-kinkang' },
     ]}
@@ -53,8 +53,8 @@ const metadata = {
       Operating Apache Kafka clusters at scale is complex and requires a number of experienced engineers. Well, not anymore!
       <br />
       <br />
-      We provide managed <a href="https://github.com/linkedin/cruise-control">Cruise Control</a>
-      instances that automatically balance, self-heal, and scale Kafka clusters.
+      We provide managed <a href="https://github.com/linkedin/cruise-control">Cruise Control</a>*
+      instances that automatically balance, heal, and scale Kafka clusters.
     </Fragment>
   </Hero3>
 
@@ -176,7 +176,7 @@ const metadata = {
 
   <Brands
     title="Companies trusting Cruise Control"
-    subtitle="We weren't joking when we said that Cruise Control is the industry standard for Kafka management"
+    subtitle="We weren't joking about Cruise Control being an industry standard"
     tagline="Adoption"
     icons={[]}
     images={[
@@ -364,14 +364,14 @@ const metadata = {
     tagline="Setup"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Configure metrics</span>',
-        description: "Kinkang needs to consume metrics from your Kafka cluster's metrics topic or Prometheus endpoint.",
+        title: 'Step 1: <span class="font-medium">Provide metrics</span>',
+        description:
+          'Kinkang has to consume metrics from your Kafka cluster so that it can build its internal representation of it.',
         icon: 'tabler:settings',
       },
       {
         title: 'Step 2: <span class="font-medium">Secure access</span>',
-        description:
-          'Kinkang needs to connect to your Kafka cluster to periodically fetch both metrics and cluster metadata. Ensuring secure networking is essential.',
+        description: 'We need to work together to setup a secure connection from Kinkang to your Kafka cluster.',
         icon: 'tabler:shield',
       },
       {
@@ -383,7 +383,7 @@ const metadata = {
         title: 'Done!',
         description: 'Your cluster is now properly taken care of.',
         icon: 'tabler:check',
-      },
+      }, 
     ]}
     image={{
       src: '~/assets/images/mandarina6.svg',
@@ -393,7 +393,7 @@ const metadata = {
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
+  <!-- <Steps2
     title="Have questions?"
     subtitle="Check the FAQs and feel free to contact us. We're here to help!"
     callToAction={{
@@ -417,7 +417,7 @@ const metadata = {
         icon: 'tabler:phone-call',
       },
     ]}
-  />
+  /> -->
 
   <!-- Features Widget *************** -->
 
@@ -520,13 +520,16 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
+        text: 'Learn more',
+        href: '/kinkang-cruise-control',
+      },
+      {
+        variant: 'secondary',
         text: 'Contact us',
         href: '/contact',
       },
     ]}
   >
-    <Fragment slot="title">Interested? Reach out for a quote</Fragment>
-
-    <Fragment slot="subtitle">We'll tailor an offer to your specific needs</Fragment>
+    <Fragment slot="title">Interested? Learn more or reach out</Fragment>
   </CallToAction>
 </Layout>
