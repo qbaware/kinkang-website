@@ -1,0 +1,46 @@
+---
+title: "Managed Kafka vs Self-Managed: When Kinkang Makes Sense"
+publishDate: 2024-03-10
+excerpt: A practical guide to deciding between fully managed Kafka services, self-managed clusters, and Kinkang's middle-ground approach.
+category: Guide
+tags: [kafka, managed-services, infrastructure]
+author: Kinkang Team
+---
+
+# Managed Kafka vs Self-Managed: When Kinkang Makes Sense
+
+Choosing how to run Apache Kafka is one of the more consequential infrastructure decisions a team can make. Here's how to think about it.
+
+## The Options
+
+### Fully Managed (Confluent Cloud, MSK, etc.)
+
+**Pros:** Zero operational burden, automatic scaling, SLA guarantees  
+**Cons:** Vendor lock-in, significant cost at scale, less control
+
+### Self-Managed Kafka
+
+**Pros:** Full control, predictable costs at scale, no lock-in  
+**Cons:** High operational burden — especially around rebalancing, upgrades, and monitoring
+
+### Kinkang (Self-Managed + Automation)
+
+**Pros:** Full control over your brokers, automated operational tasks, works with any Kafka deployment  
+**Cons:** Still requires your own brokers (but you likely already have them)
+
+## When Kinkang Makes Sense
+
+Kinkang is the right choice when:
+
+1. **You already run Kafka** — You have existing clusters and want better operational tooling
+2. **You use AWS MSK or GCP** — Kinkang adds Cruise Control capabilities these services lack
+3. **Rebalancing is painful** — Your team spends time manually managing partition distribution
+4. **You want control but not toil** — You need broker-level access but don't want to manage Cruise Control yourself
+
+## Cost Comparison
+
+At scale, self-managed Kafka can be 5–10x cheaper than fully managed services. Kinkang adds automation without adding the markup of a fully managed platform.
+
+## Our Take
+
+Most teams we talk to have already committed to Kafka. The question isn't "should we use Kafka?" but "how do we run it well?" That's exactly the problem Kinkang solves.

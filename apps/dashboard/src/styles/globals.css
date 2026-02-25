@@ -1,0 +1,6 @@
+@import '@workspace/ui/styles/globals.css';
+
+/* Map Tailwind's font-sans var to the fontsource-loaded Inter Variable font-family name */
+:root {
+  --font-inter: 'Inter Variable';
+}

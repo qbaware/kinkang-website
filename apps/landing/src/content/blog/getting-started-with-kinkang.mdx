@@ -1,0 +1,51 @@
+---
+title: Getting Started with Kinkang
+publishDate: 2024-01-15
+excerpt: Learn how to set up and connect your first Kafka cluster with Kinkang in under 10 minutes.
+category: Tutorial
+tags: [getting-started, kafka, tutorial]
+author: Kinkang Team
+---
+
+# Getting Started with Kinkang
+
+Kinkang makes it easy to manage your Apache Kafka clusters using Cruise Control. This guide walks you through connecting your first cluster.
+
+## Prerequisites
+
+Before you begin, you'll need:
+- An existing Apache Kafka cluster (self-managed, AWS MSK, or Google Cloud)
+- Your Kafka broker endpoints
+- API access credentials
+
+## Step 1: Create Your Account
+
+Sign up at [dashboard.kinkang.cloud](https://dashboard.kinkang.cloud) and create your organization.
+
+## Step 2: Connect Your Cluster
+
+From the Clusters page, click **Create Cluster** and provide:
+
+1. **Cluster name** - A friendly name for your cluster
+2. **Broker endpoints** - Your Kafka broker addresses
+3. **Authentication** - SSL certificates or SASL credentials
+
+## Step 3: Deploy Kinkang Engine
+
+Kinkang automatically deploys and configures Cruise Control for your cluster. This typically takes 2–3 minutes.
+
+## Step 4: Start Rebalancing
+
+Once connected, you can immediately start optimizing your cluster:
+
+- View partition imbalances in the dashboard
+- Trigger automated rebalancing with one click
+- Schedule regular rebalancing jobs
+
+## What's Next
+
+Explore the Kinkang dashboard to discover:
+
+- **Metrics** - Real-time cluster health monitoring
+- **Autoscaling** - Automatic broker scaling based on load
+- **Alerts** - Get notified when clusters need attention

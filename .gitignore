@@ -1,24 +1,34 @@
-# build output
-dist/
-.output/
-
-# dependencies
+# Dependencies
 node_modules/
 
-# logs
+# Next.js
+.next/
+out/
+
+# Velite
+.velite/
+
+# Environment
+.env
+.env*.local
+
+# Build
+dist/
+build/
+
+# Turbo
+.turbo/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store
-
-pnpm-lock.yaml
-
-.astro

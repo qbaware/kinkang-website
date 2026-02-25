@@ -1,4 +1,5 @@
-dist
 node_modules
-.github
-.changeset
+.next
+.turbo
+.velite
+pnpm-lock.yaml

@@ -1,0 +1,72 @@
+@import '@workspace/ui/styles/globals.css';
+
+/* Map Tailwind's font-sans var to the fontsource-loaded Inter Variable font-family name */
+:root {
+  --font-inter: 'Inter Variable';
+}
+
+.hero-dot-grid {
+  background-image: radial-gradient(circle, #d4d4d8 1px, transparent 1px); /* zinc-300 */
+  background-size: 24px 24px;
+}
+
+.dark .hero-dot-grid {
+  background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); /* zinc-700 */
+}
+
+/* ── rehype-pretty-code syntax highlighting ─────────────────────────── */
+/*
+ * rehype-pretty-code v0.14 with a dual-theme object renders ONE <pre> per block
+ * with data-theme="github-dark github-light". Token colors are applied via CSS
+ * custom properties: --shiki-light / --shiki-dark on each <span>.
+ * We show/hide the colours by applying those vars based on the .dark class.
+ */
+
+/* Code block container spacing */
+[data-rehype-pretty-code-figure] {
+  @apply my-6;
+}
+
+/* Pre block — light mode */
+[data-rehype-pretty-code-figure] pre {
+  @apply overflow-x-auto rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-sm;
+}
+
+/* Pre block — dark mode */
+.dark [data-rehype-pretty-code-figure] pre {
+  @apply border-zinc-800 bg-zinc-950;
+}
+
+/* Apply light token colours by default */
+[data-rehype-pretty-code-figure] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+/* Apply dark token colours in dark mode */
+.dark [data-rehype-pretty-code-figure] span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+
+/* Inline code inside a code block — remove extra bg from MDX component defaults */
+[data-rehype-pretty-code-figure] code {
+  @apply bg-transparent p-0;
+}
+
+/* Inline code — GitHub-style pill, suppress prose backtick pseudo-elements */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none !important;
+}
+
+.prose :not(pre) > code {
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.dark .prose :not(pre) > code {
+  background-color: rgba(110, 118, 129, 0.4);
+}
