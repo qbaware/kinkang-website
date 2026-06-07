@@ -116,8 +116,7 @@ export default function HomePage() {
 
           <p className="mx-auto mt-6 max-w-2xl text-xl text-zinc-600 dark:text-zinc-400">
             Kinkang offers a managed Apache Kafka balancing and scaling solution based on open-source
-            technologies. It keeps partitions balanced, brokers healthy, and incidents off your
-            on-call calendar.
+            technologies.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -139,6 +138,7 @@ export default function HomePage() {
               <Link href="/products/engine">See how it works</Link>
             </Button>
           </div>
+
         </div>
       </section>
 
@@ -146,7 +146,7 @@ export default function HomePage() {
       <section className="border-y border-zinc-200 dark:border-zinc-800 py-8">
         <div className="container mx-auto max-w-6xl px-4">
           <p className="text-center text-sm text-zinc-600">
-            Technology trusted by{' '}
+            Technologies trusted by{' '}
             <span className="mx-3 font-medium text-zinc-600">LinkedIn</span>
             <span className="mx-3 font-medium text-zinc-600">JPMorgan</span>
             <span className="mx-3 font-medium text-zinc-600">Bank of America</span>
@@ -156,6 +156,47 @@ export default function HomePage() {
             <span className="mx-3 font-medium text-zinc-600">Shopify</span>
             <span className="mx-3 font-medium text-zinc-600">Bosch</span>
             and many more.
+          </p>
+        </div>
+      </section>
+
+      {/* ROI Section */}
+      <section className="border-b border-zinc-200 dark:border-zinc-800 py-20">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="mb-12 text-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              The business case
+            </p>
+            <h2 className="mt-2 text-3xl font-normal tracking-[-0.03em] sm:text-4xl">
+              Cheaper than the alternative.{' '}
+              <span className="text-zinc-400">By a wide margin.</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800">
+            <div className="py-8 md:pr-12">
+              <p className="text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Engineer time saved</p>
+              <p className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">8 – 15 h</p>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">per month, per cluster</p>
+              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+                Manual Kafka rebalancing, partition reassignment, and capacity planning on a typical cluster costs a senior engineer 8–15 hours a month. At $150–200/hr that&apos;s{' '}
+                <span className="font-semibold text-zinc-900 dark:text-zinc-100">$1,200–3,000/mo in recovered engineering time</span> — before counting the incidents you avoided.
+              </p>
+            </div>
+
+            <div className="py-8 md:pl-12">
+              <p className="text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">DIY Cruise Control isn&apos;t free</p>
+              <p className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">$700 – 1,350</p>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">per month, ongoing</p>
+              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+                Self-hosting Cruise Control means a 2–5 day setup ($2,000–5,000 one-time), plus 4–8 hours/month of ongoing maintenance at $150/hr, plus AWS infra. That&apos;s{' '}
+                <span className="font-semibold text-zinc-900 dark:text-zinc-100">$700–1,350/mo before the first incident</span> — and the ops burden is still yours.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-12 text-center text-lg font-medium text-zinc-700 dark:text-zinc-300 italic">
+            &ldquo;One hour of avoided incident on a busy Kafka cluster pays for a month of Kinkang.&rdquo;
           </p>
         </div>
       </section>
@@ -217,51 +258,61 @@ export default function HomePage() {
       {/* What you get */}
       <section className="border-t border-zinc-200 dark:border-zinc-800 py-24">
         <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-                What you get
-              </p>
-              <h2 className="mt-2 text-3xl font-normal tracking-[-0.03em] sm:text-4xl">
-                Managed Kafka ops.{' '}
-                <span className="text-zinc-400">Measurable results.</span>
-              </h2>
-              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                Every Kinkang Engine ships with a full set of tools and guarantees — not just a running process.
-              </p>
-            </div>
-            <ul className="space-y-4">
-              {[
-                {
-                  icon: CheckCircle2,
-                  title: 'Fully managed Kinkang Engine',
-                  description: 'Deployed, configured, upgraded, and restarted by Kinkang. No YAML to write, no JVM to tune.',
-                },
-                {
-                  icon: BarChart3,
-                  title: 'Cruise Control metrics API',
-                  description: 'Query CC metrics programmatically for custom tooling, dashboards, and integrations.',
-                },
-                {
-                  icon: Activity,
-                  title: 'Grafana dashboard',
-                  description: 'Live visibility into cluster health, partition distribution, and Cruise Control status — out of the box.',
-                },
-                {
-                  icon: DollarSign,
-                  title: 'Fewer incidents, lower costs',
-                  description: 'Proactive rebalancing prevents broker overload before it cascades into consumer lag, data loss, or an outage. The saved headaches and customer frustration are priceless.',
-                },
-              ].map((item) => (
-                <li key={item.title} className="flex gap-4">
-                  <item.icon className="mt-0.5 h-5 w-5 shrink-0 text-indigo-600 dark:text-indigo-400" />
-                  <div>
-                    <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{item.title}</p>
-                    <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{item.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div className="mb-12 text-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              What you get
+            </p>
+            <h2 className="mt-2 text-3xl font-normal tracking-[-0.03em] sm:text-4xl">
+              Managed Kafka ops.{' '}
+              <span className="text-zinc-400">Measurable results.</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2">
+            {[
+              {
+                icon: CheckCircle2,
+                title: 'Fully managed Kinkang Engine',
+                description: 'Deployed, configured, upgraded, and restarted by Kinkang. No YAML to write, no JVM to tune.',
+              },
+              {
+                icon: BarChart3,
+                title: 'Cruise Control metrics API',
+                description: 'Query CC metrics programmatically for custom tooling, dashboards, and integrations.',
+              },
+              {
+                icon: Activity,
+                title: 'Grafana dashboard',
+                description: 'Live visibility into cluster health, partition distribution, and Cruise Control status — out of the box.',
+              },
+              {
+                icon: DollarSign,
+                title: 'Fewer incidents, lower costs',
+                description: 'Proactive rebalancing prevents broker overload before it cascades into consumer lag, data loss, or an outage.',
+              },
+              {
+                icon: Users,
+                title: 'Expert Kafka consultancy',
+                description: 'You get direct access to a team with deep, dedicated expertise in Kafka balancing. We tailor a rebalancing strategy to your exact cluster topology, traffic patterns, and business requirements — not a generic playbook.',
+              },
+              {
+                icon: Shield,
+                title: '24/7 ops coverage',
+                description: 'We watch your Kafka so you don\'t have to. Incident detection, escalation, and response — around the clock, no on-call rotation required from your team.',
+              },
+            ].map((item, i) => (
+              <div
+                key={item.title}
+                className={[
+                  'py-8',
+                  i % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:border-l border-zinc-200 dark:border-zinc-800',
+                  i >= 2 ? 'border-t border-zinc-200 dark:border-zinc-800' : '',
+                ].join(' ')}
+              >
+                <item.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                <h3 className="mt-4 text-xl font-medium text-zinc-900 dark:text-zinc-100">{item.title}</h3>
+                <p className="mt-3 text-zinc-600 dark:text-zinc-400">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

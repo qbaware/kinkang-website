@@ -15,8 +15,8 @@ const plans = [
   {
     name: 'Small',
     brokers: '≤ 6 brokers',
-    price: '$750',
-    yearlyPrice: '$9k',
+    price: '$900',
+    yearlyPrice: '~$10.8k',
     description: 'Production-ready management for small Kafka clusters.',
     features: [
       'Up to 6 brokers',
@@ -32,8 +32,8 @@ const plans = [
   {
     name: 'Medium',
     brokers: '7 – 15 brokers',
-    price: '$1,500',
-    yearlyPrice: '$18k',
+    price: '$1,800',
+    yearlyPrice: '~$21.6k',
     description: 'For growing clusters that need more headroom and reliability.',
     features: [
       'Up to 15 brokers',
@@ -49,8 +49,8 @@ const plans = [
   {
     name: 'Large',
     brokers: '16 – 30 brokers',
-    price: '$2,200',
-    yearlyPrice: '~$26k',
+    price: '$2,700',
+    yearlyPrice: '~$32.4k',
     description: 'High-throughput clusters with dedicated support and SLA guarantees.',
     features: [
       'Up to 30 brokers',
@@ -66,8 +66,8 @@ const plans = [
   {
     name: 'Enterprise',
     brokers: '> 30 brokers',
-    price: '$4,000',
-    yearlyPrice: '$48k',
+    price: 'Custom',
+    yearlyPrice: 'Contact us',
     description: 'Unlimited scale, custom contracts, and on-prem deployment options.',
     features: [
       'Unlimited brokers',
@@ -113,9 +113,11 @@ export default function PricingPage() {
                 <div>
                   <div className="flex items-baseline gap-1">
                     <span className="text-3xl font-bold">{plan.price}</span>
-                    <span className="text-sm text-muted-foreground">/mo</span>
+                    {plan.price !== 'Custom' && <span className="text-sm text-muted-foreground">/mo</span>}
                   </div>
-                  <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">or {plan.yearlyPrice}/year</p>
+                  <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
+                    {plan.price !== 'Custom' ? `or ${plan.yearlyPrice}/year` : plan.yearlyPrice}
+                  </p>
                 </div>
                 <CardDescription>{plan.description}</CardDescription>
               </CardHeader>
