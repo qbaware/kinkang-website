@@ -160,47 +160,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ROI Section */}
-      <section className="border-b border-zinc-200 dark:border-zinc-800 py-20">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="mb-12 text-center">
-            <p className="text-sm font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-              The business case
-            </p>
-            <h2 className="mt-2 text-3xl font-normal tracking-[-0.03em] sm:text-4xl">
-              Cheaper than the alternative.{' '}
-              <span className="text-zinc-400">By a wide margin.</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800">
-            <div className="py-8 md:pr-12">
-              <p className="text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Engineer time saved</p>
-              <p className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">8 – 15 h</p>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400">per month, per cluster</p>
-              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                Manual Kafka rebalancing, partition reassignment, and capacity planning on a typical cluster costs a senior engineer 8–15 hours a month. At $150–200/hr that&apos;s{' '}
-                <span className="font-semibold text-zinc-900 dark:text-zinc-100">$1,200–3,000/mo in recovered engineering time</span> — before counting the incidents you avoided.
-              </p>
-            </div>
-
-            <div className="py-8 md:pl-12">
-              <p className="text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">DIY Cruise Control isn&apos;t free</p>
-              <p className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">$700 – 1,350</p>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400">per month, ongoing</p>
-              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                Self-hosting Cruise Control means a 2–5 day setup ($2,000–5,000 one-time), plus 4–8 hours/month of ongoing maintenance at $150/hr, plus AWS infra. That&apos;s{' '}
-                <span className="font-semibold text-zinc-900 dark:text-zinc-100">$700–1,350/mo before the first incident</span> — and the ops burden is still yours.
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-12 text-center text-lg font-medium text-zinc-700 dark:text-zinc-300 italic">
-            &ldquo;One hour of avoided incident on a busy Kafka cluster pays for a month of Kinkang.&rdquo;
-          </p>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-24">
         <div className="container mx-auto max-w-6xl px-4">
@@ -240,7 +199,7 @@ export default function HomePage() {
                     {section.features.map((feature, i) => (
                       <div
                         key={feature.title}
-                        className={`p-8 ${i === 0 ? 'border-l border-r border-zinc-200 dark:border-zinc-800' : ''}`}
+                        className={`p-8 ${i === 0 ? 'sm:border-l sm:border-r border-zinc-200 dark:border-zinc-800' : ''}`}
                       >
                         <feature.icon className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
                         <h4 className="mt-4 text-base font-medium text-zinc-900 dark:text-zinc-100">{feature.title}</h4>
@@ -267,7 +226,7 @@ export default function HomePage() {
               <span className="text-zinc-400">Measurable results.</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-2">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
             {[
               {
                 icon: CheckCircle2,
@@ -302,11 +261,7 @@ export default function HomePage() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className={[
-                  'py-8',
-                  i % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:border-l border-zinc-200 dark:border-zinc-800',
-                  i >= 2 ? 'border-t border-zinc-200 dark:border-zinc-800' : '',
-                ].join(' ')}
+                className="p-8 md:border-l border-zinc-200 dark:border-zinc-800"
               >
                 <item.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
                 <h3 className="mt-4 text-xl font-medium text-zinc-900 dark:text-zinc-100">{item.title}</h3>
@@ -314,6 +269,47 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ROI Section */}
+      <section className="border-t border-zinc-200 dark:border-zinc-800 py-24">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="mb-12 text-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              The business case
+            </p>
+            <h2 className="mt-2 text-3xl font-normal tracking-[-0.03em] sm:text-4xl">
+              Cheaper than the alternative.{' '}
+              <span className="text-zinc-400">By a wide margin.</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="p-8 md:border-l border-zinc-200 dark:border-zinc-800">
+              <p className="text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Engineer time saved</p>
+              <p className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">8 – 15 h</p>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">per month, per cluster</p>
+              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+                Manual Kafka rebalancing, partition reassignment, and capacity planning on a typical cluster costs a senior engineer 8–15 hours a month. At $150–200/hr that&apos;s{' '}
+                <span className="font-semibold text-zinc-900 dark:text-zinc-100">$1,200–3,000/mo in recovered engineering time</span> — before counting the incidents you avoided.
+              </p>
+            </div>
+
+            <div className="p-8 md:border-l border-zinc-200 dark:border-zinc-800">
+              <p className="text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">DIY Cruise Control isn&apos;t free</p>
+              <p className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">$700 – 1,350</p>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">per month, ongoing</p>
+              <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+                Self-hosting Cruise Control means a 2–5 day setup ($2,000–5,000 one-time), plus 4–8 hours/month of ongoing maintenance at $150/hr, plus AWS infra. That&apos;s{' '}
+                <span className="font-semibold text-zinc-900 dark:text-zinc-100">$700–1,350/mo before the first incident</span> — and the ops burden is still yours.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-12 text-center text-lg font-medium text-zinc-700 dark:text-zinc-300 italic">
+            &ldquo;One hour of avoided incident on a busy Kafka cluster pays for a month of Kinkang.&rdquo;
+          </p>
         </div>
       </section>
 
@@ -328,8 +324,8 @@ export default function HomePage() {
               Built for the teams Kafka taxes most.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800">
-            <div className="py-8 md:pr-12">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="p-8 md:border-l border-zinc-200 dark:border-zinc-800">
               <Users className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
               <h3 className="mt-4 text-xl font-medium text-zinc-900 dark:text-zinc-100">AWS MSK teams</h3>
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
@@ -339,7 +335,7 @@ export default function HomePage() {
                 Stop paying for MSK&apos;s convenience while absorbing its ops cost.
               </p>
             </div>
-            <div className="py-8 md:pl-12">
+            <div className="p-8 md:border-l border-zinc-200 dark:border-zinc-800">
               <Server className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
               <h3 className="mt-4 text-xl font-medium text-zinc-900 dark:text-zinc-100">Self-managed Kafka teams</h3>
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
@@ -354,24 +350,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-8 py-16 text-center">
-            {/* Subtle glow behind CTA */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="h-64 w-96 rounded-full bg-indigo-600/15 blur-3xl" />
-            </div>
-            <div className="relative z-10">
-              <h2 className="text-3xl font-normal tracking-[-0.03em]">Ready to get started?</h2>
-              <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-                Get in touch with our team to learn how Kinkang can help manage your Kafka infrastructure.
-              </p>
-              <div className="mt-8">
-                <Button size="lg" className="bg-indigo-600 hover:bg-indigo-500 text-white rounded-full" asChild>
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
-              </div>
-            </div>
+      <section className="border-t border-zinc-200 dark:border-zinc-800 py-24">
+        <div className="container mx-auto max-w-6xl px-4 text-center">
+          <p className="text-sm font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+            Get started
+          </p>
+          <h2 className="mt-2 text-3xl font-normal tracking-[-0.03em] sm:text-4xl">
+            Ready to get started?{' '}
+            <span className="text-zinc-400">Let&apos;s talk.</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
+            Get in touch with our team to learn how Kinkang can help manage your Kafka infrastructure.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-500 text-white rounded-full" asChild>
+              <Link href="/contact">Contact Us</Link>
+            </Button>
           </div>
         </div>
       </section>
