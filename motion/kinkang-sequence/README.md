@@ -3,8 +3,7 @@
 A 20-second motion graphics sequence that explains Kinkang: a skewed Kafka cluster gets rebalanced, scaled out and healed by the Kinkang Engine, then resolves into the logo.
 
 - `index.html` is the source. Open it in a browser to play it live; it has a scrubber and play/pause, and the space bar toggles playback.
-- `kinkang-sequence.mp4` is the render: 1920×1080, 30 fps, H.264.
-- `render.mjs` renders the page frame by frame into the MP4.
+- `render.mjs` renders the page frame by frame into `kinkang-sequence.mp4` (1920×1080, 30 fps, H.264). The video isn't committed; run the steps under **Rendering** to recreate it.
 
 ## Storyboard
 
@@ -28,7 +27,7 @@ The partition moves are computed rather than keyframed. Each rebalance pops part
 ```bash
 cd motion/kinkang-sequence
 npm install
-npm run render            # -> kinkang-sequence.mp4
+npm run render            # -> kinkang-sequence.mp4 (600 frames; takes several minutes on CPU)
 npm run preview           # -> stills/ at key moments for quick review
 node render.mjs --width 3840 --height 2160 --out kinkang-4k.mp4
 ```
@@ -37,7 +36,7 @@ The renderer needs `ffmpeg` on the PATH and uses Playwright's Chromium with Swif
 
 ## Using it on the site
 
-The MP4 can go into `apps/landing/public/` and play as a muted, looping hero video:
+After rendering, copy the MP4 into `apps/landing/public/` so it can play as a muted, looping hero video:
 
 ```tsx
 <video src="/kinkang-sequence.mp4" autoPlay muted loop playsInline />
