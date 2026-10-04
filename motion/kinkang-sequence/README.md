@@ -27,7 +27,7 @@ The partition moves are computed rather than keyframed. Each rebalance pops part
 ```bash
 cd motion/kinkang-sequence
 npm install
-npm run render            # -> kinkang-sequence.mp4 (600 frames; takes several minutes on CPU)
+npm run render            # -> kinkang-sequence.mp4 (600 frames; about 15 minutes on CPU)
 npm run preview           # -> stills/ at key moments for quick review
 node render.mjs --width 3840 --height 2160 --out kinkang-4k.mp4
 ```
