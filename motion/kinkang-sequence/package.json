@@ -1,0 +1,16 @@
+{
+  "name": "kinkang-sequence",
+  "private": true,
+  "type": "module",
+  "description": "20-second motion graphics sequence explaining Kinkang, rendered frame-exact to MP4",
+  "scripts": {
+    "render": "node render.mjs",
+    "preview": "node render.mjs --stills 1.5,5,8.5,11.3,13.3,15.5,17.6,19.4"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.1.0",
+    "@fontsource/jetbrains-mono": "^5.1.0",
+    "playwright": "^1.56.1",
+    "three": "0.169.0"
+  }
+}
